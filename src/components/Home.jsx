@@ -16,7 +16,7 @@ function Home({ onSelectCategory }) {
   return (
     <main>
       <aside className="promo-bar rounded-3 px-4 py-3 mb-3 text-center" aria-label="Current promotion">
-        <strong>Save 15% + Free Shipping</strong>
+        <strong>Save 15% + Free Shipping On All Orders</strong>
       </aside>
 
       <section className="hero-section rounded-4 p-4 p-lg-5 shadow-sm">
