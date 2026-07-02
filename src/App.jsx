@@ -109,7 +109,10 @@ function AppContent() {
       <Header cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)} />
       <div className="container py-4 py-lg-5">
         <Routes>
-          <Route path="/" element={<Home products={products} />} />
+          <Route
+            path="/"
+            element={<Home onSelectCategory={(category) => handleFilterChange('category', category)} />}
+          />
           <Route
             path="/shop"
             element={

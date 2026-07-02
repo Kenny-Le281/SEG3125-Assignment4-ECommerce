@@ -39,10 +39,16 @@ function Header({ cartCount }) {
               </NavLink>
             </li>
           </ul>
-          <Link className="btn btn-accent d-flex align-items-center gap-2" to="/cart">
-            <span aria-hidden="true">🛒</span>
-            Cart
-            <span className="badge bg-dark text-light">{cartCount}</span>
+          <Link className="cart-link" to="/cart" aria-label={`View cart with ${cartCount} items`}>
+            <span className="cart-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H7" />
+                <circle cx="10" cy="19" r="1.3" />
+                <circle cx="18" cy="19" r="1.3" />
+              </svg>
+            </span>
+            <span className="cart-label">Cart</span>
+            <span className="cart-count">{cartCount}</span>
           </Link>
         </div>
       </nav>

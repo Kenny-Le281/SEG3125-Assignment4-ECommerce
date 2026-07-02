@@ -1,10 +1,10 @@
 function Filters({ filters, onFilterChange, onClearFilters, resultCount, productsCount }) {
   const categories = ['Keyboard', 'Mouse', 'Mousepad', 'Headset', 'Controller']
-  const brands = ['NovaKeys', 'GlidePro', 'EchoBeam', 'StreamLite', 'ControlX', 'AuraKey', 'PlayPulse', 'SpeedMat']
+  const brands = ['NovaKeys', 'GlidePro', 'EchoBeam', 'ControlX', 'AuraKey', 'PlayPulse', 'SpeedMat']
   const colours = ['Black', 'White', 'Gray']
   const connectionTypes = ['Wired', 'Wireless']
-  const compatibilities = ['PC', 'Mac', 'PlayStation', 'Xbox', 'Mobile']
-  const useCases = ['Gaming', 'Work', 'Streaming', 'Travel', 'Study']
+  const compatibilities = ['PC', 'Mac', 'PlayStation', 'Xbox', 'Switch', 'Mobile']
+  const useCases = ['Gaming', 'Work', 'Study']
 
   const handleChange = (name, value) => {
     onFilterChange(name, value)

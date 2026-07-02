@@ -153,7 +153,7 @@ function Checkout({ cartItems, onBackToCart, onCompleteCheckout, onGoHome }) {
           {errors.cvv && <div className="invalid-feedback d-block">{errors.cvv}</div>}
         </div>
         <div className="col-12">
-          <div className="form-check">
+          <div className="form-check billing-checkbox rounded-3">
             <input id="billingSameAsShipping" className="form-check-input" type="checkbox" name="billingSameAsShipping" checked={form.billingSameAsShipping} onChange={handleChange} />
             <label className="form-check-label" htmlFor="billingSameAsShipping">Billing address is the same as shipping</label>
           </div>

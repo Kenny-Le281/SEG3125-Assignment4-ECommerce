@@ -23,7 +23,7 @@ const products = [
     category: 'Mouse',
     brand: 'GlidePro',
     price: 79,
-    colour: 'black',
+    colour: 'Black',
     connectionType: 'Wireless',
     compatibility: ['PC', 'Mac', 'Mobile'],
     useCase: 'Work',

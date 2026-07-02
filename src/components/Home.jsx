@@ -3,8 +3,9 @@ import keyboardImage from '../assets/keyboard1.jpg'
 import mouseImage from '../assets/mouse1.jpg'
 import headsetImage from '../assets/headset1.jpg'
 import controllerImage from '../assets/controller1.jpg'
+import heroImage from '../assets/hero.png'
 
-function Home() {
+function Home({ onSelectCategory }) {
   const featuredCategories = [
     { name: 'Keyboard', image: keyboardImage },
     { name: 'Mouse', image: mouseImage },
@@ -15,21 +16,30 @@ function Home() {
   return (
     <main>
       <aside className="promo-bar rounded-3 px-4 py-3 mb-3 text-center" aria-label="Current promotion">
-        <strong>Save 15% + free shipping on orders $99+</strong>
+        <strong>Save 15% + Free Shipping</strong>
       </aside>
 
       <section className="hero-section rounded-4 p-4 p-lg-5 shadow-sm">
         <div className="row align-items-center g-4">
-          <div className="col-12 hero-copy">
+          <div className="col-lg-7 hero-copy">
             <p className="text-uppercase fw-semibold text-accent mb-3">Limited-time setup deals!</p>
             <h1 className="display-4 fw-bold mb-3">Build your perfect desk setup with TechHub.</h1>
             <p className="lead text-light-emphasis mb-4">
-              Discover premium keyboards, mice, headsets, webcams, and desk accessories that help you work, play, and stream with ease.
+              Discover premium keyboards, mice, headsets, and desk accessories that help you work, play, and stream with ease.
             </p>
             <div className="d-flex flex-wrap gap-3">
               <Link className="btn btn-accent btn-lg" to="/shop">
                 Shop the deal
               </Link>
+            </div>
+          </div>
+          <div className="col-lg-5">
+            <div className="hero-image-wrapper">
+              <img
+                src={heroImage}
+                alt="Layered tech accessories"
+                className="hero-image img-fluid"
+              />
             </div>
           </div>
         </div>
@@ -45,16 +55,22 @@ function Home() {
         <div className="row g-3">
           {featuredCategories.map((category) => (
             <div className="col-6 col-md-3" key={category.name}>
-              <div className="category-card category-card-large p-4 rounded-4 h-100 text-center">
-                <img
-                  src={category.image}
-                  alt={`${category.name} accessories`}
-                  className="category-image img-fluid rounded-3 mb-3 w-100"
-                  loading="lazy"
-                />
-                <h3 className="h6 fw-semibold">{category.name}</h3>
-                <p className="small text-light-emphasis mb-0">Curated picks for your workspace.</p>
-              </div>
+              <Link
+                className="category-link d-block h-100"
+                to="/shop"
+                onClick={() => onSelectCategory(category.name)}
+              >
+                <div className="category-card category-card-large p-4 rounded-4 h-100 text-center">
+                  <img
+                    src={category.image}
+                    alt={`${category.name} accessories`}
+                    className="category-image img-fluid rounded-3 mb-3 w-100"
+                    loading="lazy"
+                  />
+                  <h3 className="h6 fw-semibold">{category.name}</h3>
+                  <p className="small text-light-emphasis mb-0">Curated picks for your workspace.</p>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -69,19 +85,19 @@ function Home() {
           </p>
           <div className="row g-3">
             <div className="col-md-4">
-              <div className="p-3 rounded-3 bg-dark-subtle">
+              <div className="benefit-card p-3 rounded-3 h-100">
                 <strong>Fast picks</strong>
                 <p className="small text-light-emphasis mb-0">Find your next accessory in minutes.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="p-3 rounded-3 bg-dark-subtle">
+              <div className="benefit-card p-3 rounded-3 h-100">
                 <strong>Simple filters</strong>
                 <p className="small text-light-emphasis mb-0">Narrow by brand, price, and device.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="p-3 rounded-3 bg-dark-subtle">
+              <div className="benefit-card p-3 rounded-3 h-100">
                 <strong>Easy checkout</strong>
                 <p className="small text-light-emphasis mb-0">Move from cart to confirmation in a few steps.</p>
               </div>

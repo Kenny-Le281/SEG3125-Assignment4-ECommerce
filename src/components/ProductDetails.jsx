@@ -58,7 +58,7 @@ function ProductDetails({ product, onClose, onAddToCart }) {
               Keep exploring
             </button>
             <button type="button" className="btn btn-accent" onClick={() => onAddToCart(product)}>
-              Add to setup
+              Add to cart
             </button>
           </div>
         </div>
