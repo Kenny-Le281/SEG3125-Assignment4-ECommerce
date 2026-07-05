@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Survey({ compact = false }) {
   const [submitted, setSubmitted] = useState(false)
@@ -24,7 +25,8 @@ function Survey({ compact = false }) {
       <section className={compact ? 'border-top border-secondary pt-4 mt-4 text-start' : 'glass-panel p-5 rounded-4 text-center'}>
         <p className="text-uppercase fw-semibold text-accent mb-2">Thanks for sharing</p>
         <h2 className="h3 mb-3">Your feedback helps us improve.</h2>
-        <p className="text-light-emphasis mb-0">We appreciate your thoughts and will use them to build a better shopping experience for your next setup.</p>
+        <p className="text-light-emphasis mb-4">We appreciate your thoughts and will use them to build a better shopping experience for your next setup.</p>
+        <Link className="btn btn-accent" to="/">Back to home</Link>
       </section>
     )
   }

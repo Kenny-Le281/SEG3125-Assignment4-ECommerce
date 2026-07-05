@@ -18,7 +18,7 @@ const initialForm = {
   billingAddress: '',
 }
 
-function Checkout({ cartItems, onBackToCart, onCompleteCheckout, onGoHome }) {
+function Checkout({ cartItems, onCompleteCheckout }) {
   const [step, setStep] = useState(2)
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({})
@@ -197,10 +197,6 @@ function Checkout({ cartItems, onBackToCart, onCompleteCheckout, onGoHome }) {
         <Survey compact />
       </div>
 
-      <div className="d-grid gap-2 d-sm-flex justify-content-center mt-4">
-        <button className="btn btn-accent" onClick={onGoHome}>Back to home</button>
-        <button className="btn btn-outline-primary" onClick={onBackToCart}>View cart</button>
-      </div>
     </div>
   )
 

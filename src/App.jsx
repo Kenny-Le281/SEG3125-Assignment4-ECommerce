@@ -166,7 +166,7 @@ function AppContent() {
             }
           />
           <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateQuantity={updateQuantity} onRemoveItem={removeItem} onCheckout={() => navigate('/checkout')} />} />
-          <Route path="/checkout" element={<Checkout cartItems={cartItems} onBackToCart={() => navigate('/cart')} onCompleteCheckout={() => {}} onGoHome={() => navigate('/')} />} />
+          <Route path="/checkout" element={<Checkout cartItems={cartItems} onCompleteCheckout={() => {}} />} />
           <Route path="/survey" element={<Survey />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="/" replace />} />
