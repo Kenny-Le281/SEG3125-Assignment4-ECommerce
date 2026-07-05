@@ -1,3 +1,19 @@
+import keyboard1 from '../assets/keyboard1.jpg'
+import keyboard2 from '../assets/keyboard2.jpg'
+import keyboard3 from '../assets/keyboard3.jpg'
+import mouse1 from '../assets/mouse1.jpg'
+import mouse2 from '../assets/mouse2.jpg'
+import mouse3 from '../assets/mouse3.jpg'
+import headset1 from '../assets/headset1.jpg'
+import headset2 from '../assets/headset2.jpg'
+import headset3 from '../assets/headset3.jpg'
+import controller1 from '../assets/controller1.jpg'
+import controller2 from '../assets/controller2.jpg'
+import controller3 from '../assets/controller3.jpg'
+import mousepad1 from '../assets/mousepad1.jpg'
+import mousepad2 from '../assets/mousepad2.jpg'
+import mousepad3 from '../assets/mousepad3.jpg'
+
 const products = [
   {
     id: 1,
@@ -12,7 +28,7 @@ const products = [
     rating: 4.8,
     description: 'A premium tactile keyboard with hot-swappable switches and a compact layout for focused work and play.',
     icon: '⌨️',
-    image: '/src/assets/keyboard1.jpg',
+    image: keyboard1,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-15',
@@ -30,7 +46,7 @@ const products = [
     rating: 4.6,
     description: 'Lightweight and precise for everyday multitasking, editing, and long study sessions.',
     icon: '🖱️',
-    image: '/src/assets/mouse1.jpg',
+    image: mouse1,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-04-11',
@@ -48,7 +64,7 @@ const products = [
     rating: 4.9,
     description: 'Immersive 7.1 audio with a comfortable fit for marathon gaming nights.',
     icon: '🎧',
-    image: '/src/assets/headset1.jpg',
+    image: headset1,
     stockStatus: 'Low stock',
     newest: false,
     dateAdded: '2026-03-25',
@@ -66,7 +82,7 @@ const products = [
     rating: 4.8,
     description: 'A responsive controller with low-latency connection and a comfortable grip for gaming setups.',
     icon: '🎮',
-    image: '/src/assets/controller1.jpg',
+    image: controller1,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2025-12-14',
@@ -84,7 +100,7 @@ const products = [
     rating: 4.6,
     description: 'A large, smooth surface designed for precise movement and a clean desk aesthetic.',
     icon: '🖼️',
-    image: '/src/assets/mousepad1.jpg',
+    image: mousepad1,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-21',
@@ -102,7 +118,7 @@ const products = [
     rating: 4.7,
     description: 'A compact tenkeyless keyboard that balances speed, comfort, and a clean minimalist look.',
     icon: '⌨️',
-    image: '/src/assets/keyboard2.jpg',
+    image: keyboard2,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-28',
@@ -120,7 +136,7 @@ const products = [
     rating: 4.4,
     description: 'A lightweight keyboard with responsive keys and a friendly layout for everyday typing.',
     icon: '⌨️',
-    image: '/src/assets/keyboard3.jpg',
+    image: keyboard3,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-05-22',
@@ -138,7 +154,7 @@ const products = [
     rating: 4.5,
     description: 'An ergonomic mouse designed for long hours of studying, design work, and multitasking.',
     icon: '🖱️',
-    image: '/src/assets/mouse2.jpg',
+    image: mouse2,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-05-10',
@@ -156,7 +172,7 @@ const products = [
     rating: 4.8,
     description: 'A fast, lightweight mouse with a precise sensor and a comfortable grip for gaming.',
     icon: '🖱️',
-    image: '/src/assets/mouse3.jpg',
+    image: mouse3,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-20',
@@ -174,7 +190,7 @@ const products = [
     rating: 4.6,
     description: 'A balanced headset with clear audio and plush comfort for calls, music, and studying.',
     icon: '🎧',
-    image: '/src/assets/headset2.jpg',
+    image: headset2,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-05-14',
@@ -192,7 +208,7 @@ const products = [
     rating: 4.9,
     description: 'An immersive headset with strong bass and soft earcups for long gaming sessions.',
     icon: '🎧',
-    image: '/src/assets/headset3.jpg',
+    image: headset3,
     stockStatus: 'Low stock',
     newest: true,
     dateAdded: '2026-06-18',
@@ -210,7 +226,7 @@ const products = [
     rating: 4.6,
     description: 'A bright, responsive controller ideal for casual play and quick setup.',
     icon: '🎮',
-    image: '/src/assets/controller2.jpg',
+    image: controller2,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-05-19',
@@ -228,7 +244,7 @@ const products = [
     rating: 4.8,
     description: 'A premium controller built for comfort, accuracy, and long play sessions.',
     icon: '🎮',
-    image: '/src/assets/controller3.jpg',
+    image: controller3,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-22',
@@ -246,7 +262,7 @@ const products = [
     rating: 4.4,
     description: 'A soft, smooth mousepad that improves glide and keeps your desk looking tidy.',
     icon: '🖼️',
-    image: '/src/assets/mousepad2.jpg',
+    image: mousepad2,
     stockStatus: 'In stock',
     newest: false,
     dateAdded: '2026-05-08',
@@ -264,7 +280,7 @@ const products = [
     rating: 4.6,
     description: 'A premium desk mat that adds comfort, style, and extra room for your setup.',
     icon: '🖼️',
-    image: '/src/assets/mousepad3.jpg',
+    image: mousepad3,
     stockStatus: 'In stock',
     newest: true,
     dateAdded: '2026-06-12',
