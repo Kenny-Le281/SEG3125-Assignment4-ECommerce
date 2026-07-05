@@ -8,6 +8,7 @@ import Filters from './components/Filters'
 import Cart from './components/Cart'
 import Checkout from './components/Checkout'
 import Survey from './components/Survey'
+import FAQ from './components/FAQ'
 import products from './data/products'
 import './App.css'
 
@@ -167,6 +168,7 @@ function AppContent() {
           <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateQuantity={updateQuantity} onRemoveItem={removeItem} onCheckout={() => navigate('/checkout')} />} />
           <Route path="/checkout" element={<Checkout cartItems={cartItems} onBackToCart={() => navigate('/cart')} onCompleteCheckout={() => {}} onGoHome={() => navigate('/')} />} />
           <Route path="/survey" element={<Survey />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

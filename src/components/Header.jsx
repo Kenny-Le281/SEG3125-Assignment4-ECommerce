@@ -38,6 +38,11 @@ function Header({ cartCount }) {
                 Survey
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className={navLinkClass} to="/faq">
+                FAQ
+              </NavLink>
+            </li>
           </ul>
           <Link className="cart-link" to="/cart" aria-label={`View cart with ${cartCount} items`}>
             <span className="cart-icon" aria-hidden="true">
