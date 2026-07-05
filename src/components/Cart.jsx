@@ -32,11 +32,11 @@ function Cart({ cartItems, onUpdateQuantity, onRemoveItem, onCheckout }) {
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-2 flex-wrap">
-                    <button className="btn btn-outline-light btn-sm" onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}>
+                    <button className="btn btn-outline-dark btn-sm" aria-label={`Decrease ${item.name} quantity`} onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}>
                       −
                     </button>
                     <span className="fw-semibold px-2">{item.quantity}</span>
-                    <button className="btn btn-outline-light btn-sm" onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
+                    <button className="btn btn-outline-dark btn-sm" aria-label={`Increase ${item.name} quantity`} onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
                       +
                     </button>
                     <button className="btn btn-outline-danger btn-sm" onClick={() => onRemoveItem(item.id)}>
