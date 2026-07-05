@@ -52,7 +52,7 @@ function Checkout({ cartItems, onCompleteCheckout }) {
     const nextErrors = {}
     if (!form.cardName.trim()) nextErrors.cardName = 'Please enter the cardholder name.'
     if (!form.cardNumber.trim()) nextErrors.cardNumber = 'Please enter the card number.'
-    else if (!/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(form.cardNumber)) nextErrors.cardNumber = 'Use a fake card number in the format 0000 0000 0000 0000.'
+    else if (!/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/.test(form.cardNumber)) nextErrors.cardNumber = 'Enter a card number in the format 0000 0000 0000 0000.'
     if (!form.expiry.trim()) nextErrors.expiry = 'Please enter the expiry date.'
     if (!form.cvv.trim()) nextErrors.cvv = 'Please enter the CVV.'
 
