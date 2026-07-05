@@ -1,3 +1,5 @@
+import ProductVisual from './ProductVisual'
+
 function Cart({ cartItems, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
@@ -24,7 +26,9 @@ function Cart({ cartItems, onUpdateQuantity, onRemoveItem, onCheckout }) {
               {cartItems.map((item) => (
                 <div key={item.id} className="cart-item p-3 rounded-4 d-flex flex-column flex-md-row justify-content-between gap-3">
                   <div className="d-flex gap-3 align-items-center">
-                    <div className="product-emoji">{item.icon}</div>
+                    <div className="cart-product-image-wrapper rounded-3 overflow-hidden">
+                      <ProductVisual product={item} className="cart-product-image" />
+                    </div>
                     <div>
                       <h3 className="h6 mb-1">{item.name}</h3>
                       <p className="small text-light-emphasis mb-0">{item.category}</p>
