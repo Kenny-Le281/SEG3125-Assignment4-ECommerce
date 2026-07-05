@@ -130,7 +130,6 @@ function Checkout({ cartItems, onBackToCart, onCompleteCheckout, onGoHome }) {
     <div className="glass-panel p-4 rounded-4">
       <p className="text-uppercase fw-semibold text-accent mb-2">Step 3 of 5</p>
       <h2 className="h3 mb-3">Secure payment</h2>
-      <p className="text-light-emphasis mb-4">This is a prototype checkout, so your payment details stay on screen only.</p>
       <div className="row g-3">
         <div className="col-md-6">
           <label className="form-label" htmlFor="cardName">Cardholder name</label>
