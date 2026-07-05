@@ -116,6 +116,19 @@
   font-weight: 800;
 }
 
+.product-card {
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.product-card:hover,
+.product-card:focus-visible {
+  border-color: rgba(43, 127, 255, 0.42);
+  box-shadow: 0 14px 30px rgba(43, 127, 255, 0.16);
+  outline: none;
+  transform: translateY(-4px);
+}
+
 .hero-copy {
   max-width: 900px;
 }
@@ -238,10 +251,6 @@
 
 .modal {
   display: block;
-}
-
-.modal-backdrop {
-  opacity: 0.7;
 }
 
 .form-control,

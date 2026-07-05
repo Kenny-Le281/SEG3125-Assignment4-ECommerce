@@ -1,8 +1,27 @@
 import ProductVisual from './ProductVisual'
 
 function ProductCard({ product, onAddToCart, onViewDetails }) {
+  const handleKeyDown = (event) => {
+    if (event.target === event.currentTarget && (event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault()
+      onViewDetails(product)
+    }
+  }
+
+  const handleAddToCart = (event) => {
+    event.stopPropagation()
+    onAddToCart(product)
+  }
+
   return (
-    <article className="product-card p-3 rounded-4 h-100">
+    <article
+      className="product-card p-3 rounded-4 h-100"
+      role="button"
+      tabIndex="0"
+      aria-label={`View ${product.name}`}
+      onClick={() => onViewDetails(product)}
+      onKeyDown={handleKeyDown}
+    >
       <div className="d-flex justify-content-between align-items-start mb-3">
         <div className="product-visual-wrapper rounded-3 overflow-hidden">
           <ProductVisual product={product} className="product-visual" />
@@ -31,12 +50,9 @@ function ProductCard({ product, onAddToCart, onViewDetails }) {
           <span className="pill" key={device}>{device}</span>
         ))}
       </div>
-      <div className="d-flex gap-2">
-        <button className="btn btn-accent flex-grow-1" onClick={() => onAddToCart(product)}>
+      <div>
+        <button className="btn btn-accent w-100" onClick={handleAddToCart}>
           Add to Cart
-        </button>
-        <button className="btn btn-outline-light" onClick={() => onViewDetails(product)}>
-          Details
         </button>
       </div>
     </article>

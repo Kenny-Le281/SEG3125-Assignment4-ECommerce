@@ -12,7 +12,7 @@ function ProductDetails({ product, onClose, onAddToCart }) {
               <p className="text-accent fw-semibold mb-1">{product.category}</p>
               <h2 id="product-details-title" className="h3 mb-0">{product.name}</h2>
             </div>
-            <button type="button" className="btn-close btn-close-white" aria-label="Close details" onClick={onClose}></button>
+            <button type="button" className="btn-close" aria-label="Close details" onClick={onClose}></button>
           </div>
           <div className="modal-body">
             <div className="row g-4">
@@ -63,7 +63,6 @@ function ProductDetails({ product, onClose, onAddToCart }) {
           </div>
         </div>
       </div>
-      <div className="modal-backdrop show"></div>
     </div>
   )
 }
